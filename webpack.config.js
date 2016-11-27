@@ -1,10 +1,11 @@
 module.exports = {
   context: __dirname + "/src",
 
-  entry: {
-    javascript: "./js/app.js"
+  entry: [
+    "./js/app.js",
+    // "./css/app.scss"
     // html: "./index.html"
-  }, 
+  ], 
   output: {
     filename: "bundle.js",
     path: __dirname + "/dist",
@@ -22,7 +23,11 @@ module.exports = {
       {
         test: /\.html$/,
         loader: "file?name=[name].[ext]"
-    }
+      },
+      { 
+        test: /\.less$/,
+        loader: "style!css!autoprefixer!scss"
+      },  
     ]
   }
 };
