@@ -3,11 +3,9 @@ module.exports = {
 
   entry: [
     "./js/app.js",
-    // "./css/app.scss"
-    // html: "./index.html"
   ], 
   output: {
-    filename: "bundle.js",
+    filename: "app.js",
     path: __dirname + "/dist",
   },
    resolve: {
