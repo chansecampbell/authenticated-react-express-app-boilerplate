@@ -1,11 +1,12 @@
-# react-express-map-app
+# Authenticated React Express App
+- This app will be able to be used as an authenticated React template with an Express backend.
 
-To run webpack and update the JS files from the src to dist type 'webpack'.
-To run webpack and keep it looking for updates type 'webpack --watch'.
+##To do
+- Setup React
+- Setup Redux
+- Setup frontend authentication
 
-The boot up you currently need to run 'webpack-dev-server'.
-
-Need to:
-- Setup the gulpfile to run with gulp build or gulp dev
-- Setup webpack to only run the js commands when the gulp command is run instead
-    - (e.g. gulp reuns webpack for us along with webpack --watch and webpack-dev-server)
+##Instructions to run
+- To initially build the 'dist' folder and to compile & minify run 'gulp build'
+- To boot up you currently need to run 'webpack-dev-server'.
+- To detect changes and recompile to the 'dist' folders, run 'gulp watch' in a second window
