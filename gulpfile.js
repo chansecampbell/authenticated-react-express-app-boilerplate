@@ -19,7 +19,7 @@ gulp.task("sass", () => {
 gulp.task("js", () => {
     const WebpackConf = require("./webpack.config.js");
     const webpack = require('webpack-stream');
-    return gulp.src("src/js/**/app.js")
+    return gulp.src("src/app.jsx")
         .pipe(webpack(require('./webpack.config.js')))
         .pipe(gulp.dest("dist/js"));
 });
@@ -41,7 +41,7 @@ gulp.task("minify",["sass", "js"], () => {
 
 // watches for changes in our scss files and then reruns the above code
 gulp.task("watch", () => {
-  gulp.watch(["src/css/**.scss", "src/js/**.js"], ["minify"]);
+  gulp.watch(["src/css/**.scss", "src/js/**.js", "src/app.js"], ["minify"]);
 });
 
 // run to initially build the css dist directory
