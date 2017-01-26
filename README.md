@@ -1,12 +1,14 @@
-# Authenticated React Express App
-- This app will be able to be used as an authenticated React template with an Express backend.
+# Authenticated react/express app
+An authenticated react/express app
 
-##To do
-- Setup React
-- Setup Redux
-- Setup frontend authentication
+##Run the following commands to start the project:
+- `npm init`
+- `npm install`
+- `webpack` to build the js
+- `gulp sass` to build the css
+- `python -m SimpleHTTPServer` to run the project
 
-##Instructions to run
-- To initially build the 'dist' folder and to compile & minify run 'gulp build'
-- To boot up you currently need to run 'webpack-dev-server'.
-- To detect changes and recompile to the 'dist' folders, run 'gulp watch' in a second window
+##To dos:
+- Build out front end
+- Integrate the express app
+- Update react router to use browserHistory with server side rendering and remove hashHistory

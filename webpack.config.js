@@ -1,31 +1,19 @@
+var path = require('path');
+var webpack = require('webpack');
+ 
 module.exports = {
-  context: __dirname + "/src",
-
-  entry: [
-    "./app.jsx",
-  ], 
-  output: {
-    filename: "app.js",
-    path: __dirname + "/dist",
-  },
-   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
-  },
+  entry: './public/js/app.jsx',
+  output: { path: __dirname, filename: './dist/bundle.js' },
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /.jsx?$/,
+        loader: 'babel-loader',
         exclude: /node_modules/,
-        loaders: ["babel-loader"]
-      },
-      {
-        test: /\.html$/,
-        loader: "file?name=[name].[ext]"
-      },
-      { 
-        test: /\.less$/,
-        loader: "style!css!autoprefixer!scss"
-      },  
+        query: {
+          presets: ['es2015', 'react']
+        }
+      }
     ]
-  }
+  },
 };

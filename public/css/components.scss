@@ -1,0 +1,75 @@
+.header {
+    min-height: 60px;
+    background: orange;
+    color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+
+    .header__logo {
+        font-size: 22px;
+        display: inline;
+    }
+
+    .header__burger {
+        display: none;
+
+        @media only screen and (max-width: 767px) {
+            display: inline-block;
+            float: right;
+            * { font-size: 21px; padding-top: 8px; }
+        }
+    }
+
+    .header__links {
+        text-align: right;
+        list-style-type: none;
+        float: right;
+        margin: 0;
+        
+        a { 
+            padding-right: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #FFF;
+            font-weight: bold;
+        }
+
+        li { float: left; padding-bottom: 0px; }
+
+        @media only screen and (max-width: 767px) {
+            float: none;
+            margin: 16px 0;
+            background-color: orange;
+
+            &.true { display: block }
+            &.false { display: none; }
+            a { padding: 0 0 10px 0; }
+            
+            li { float: none; padding-bottom: 10px; }
+        }
+    }
+}
+
+// 692px
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
